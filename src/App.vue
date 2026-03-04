@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
 import { BatteryFull } from 'lucide-vue-next'
-import { ThemeToggle } from '@/components/common/ThemeToggle'
 </script>
 
 <template>

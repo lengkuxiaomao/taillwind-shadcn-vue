@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { useCounterStore } from '@/stores/counter'
 import { Rocket, Layers, ShieldCheck, Zap, ArrowRight } from 'lucide-vue-next'
 
