@@ -111,7 +111,24 @@
   --sidebar-accent: oklch(0.274 0.006 286.033);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+.theme-rose {
+  --primary: oklch(0.6 0.18 0);
+  --primary-foreground: oklch(0.98 0 0);
+  --accent: oklch(0.9 0.05 0);
+  --accent-foreground: oklch(0.2 0.05 0);
+  --ring: oklch(0.6 0.18 0);
+}
+
+.theme-rose.dark {
+  --primary: oklch(0.7 0.15 0);
+  --primary-foreground: oklch(0.1 0 0);
+  --accent: oklch(0.25 0.05 0);
+  --accent-foreground: oklch(0.9 0.05 0);
+  --ring: oklch(0.7 0.15 0);
 }
 
 @layer base {

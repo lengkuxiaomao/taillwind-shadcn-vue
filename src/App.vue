@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { Github } from 'lucide-vue-next'
+import { BatteryFull } from 'lucide-vue-next'
+import ThemeToggle from '@/components/ThemeToggle.vue'
 </script>
 
 <template>
-  <div
-    class="min-h-screen bg-neutral-50 dark:bg-neutral-900 font-sans text-neutral-900 dark:text-neutral-100"
-  >
+  <div class="min-h-screen bg-background font-sans text-foreground">
     <!-- Premium Header -->
     <header
-      class="sticky top-0 z-50 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md transition-all duration-300"
+      class="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md transition-all duration-300"
     >
       <div class="container mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         <div class="flex items-center gap-2">
@@ -19,7 +18,7 @@ import { Github } from 'lucide-vue-next'
             <span class="text-primary-foreground font-bold text-lg select-none">V</span>
           </div>
           <span
-            class="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-neutral-900 via-neutral-600 to-neutral-400 dark:from-white dark:via-neutral-300 dark:to-neutral-500"
+            class="text-xl font-extrabold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-primary via-primary/80 to-primary/60"
           >
             Vitesse Vue
           </span>
@@ -47,13 +46,14 @@ import { Github } from 'lucide-vue-next'
         </nav>
 
         <div class="flex items-center gap-4">
+          <ThemeToggle />
           <a
             href="https://github.com/shadcn-vue"
             target="_blank"
             rel="noreferrer"
-            class="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium border border-neutral-200 dark:border-neutral-800 bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all active:scale-95 shadow-sm"
+            class="hidden sm:inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium border border-border bg-transparent hover:bg-accent transition-all active:scale-95 shadow-sm"
           >
-            <Github class="h-4 w-4" />
+            <BatteryFull class="h-4 w-4" />
             GitHub
           </a>
         </div>
