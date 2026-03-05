@@ -11,18 +11,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Badge: typeof import('./components/ui/badge/Badge.vue')['default']
-    Button: typeof import('./components/ui/button/Button.vue')['default']
-    Card: typeof import('./components/ui/card/Card.vue')['default']
-    CardAction: typeof import('./components/ui/card/CardAction.vue')['default']
-    CardContent: typeof import('./components/ui/card/CardContent.vue')['default']
-    CardDescription: typeof import('./components/ui/card/CardDescription.vue')['default']
-    CardFooter: typeof import('./components/ui/card/CardFooter.vue')['default']
-    CardHeader: typeof import('./components/ui/card/CardHeader.vue')['default']
-    CardTitle: typeof import('./components/ui/card/CardTitle.vue')['default']
-    Checkbox: typeof import('./components/ui/checkbox/Checkbox.vue')['default']
+    NiBadge: typeof import('@/components/ui/badge')['Badge']
+    NiButton: typeof import('@/components/ui/button')['Button']
+    NiCard: typeof import('@/components/ui/card')['Card']
+    NiCardContent: typeof import('@/components/ui/card')['CardContent']
+    NiCardDescription: typeof import('@/components/ui/card')['CardDescription']
+    NiCardHeader: typeof import('@/components/ui/card')['CardHeader']
+    NiCardTitle: typeof import('@/components/ui/card')['CardTitle']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ThemeToggle: typeof import('./components/common/ThemeToggle/index.vue')['default']
+    ThemeToggle: typeof import('@/components/common/ThemeToggle')['ThemeToggle']
   }
 }

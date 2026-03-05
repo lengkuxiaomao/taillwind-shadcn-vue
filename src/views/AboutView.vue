@@ -11,11 +11,11 @@ const stats = [
 
 <template>
   <div class="py-20 space-y-20">
-    <!-- About Hero -->
+    <!-- 关于介绍 -->
     <section class="text-center space-y-6 max-w-3xl mx-auto px-6">
-      <Badge variant="outline" class="px-4 py-1 border-primary/20 bg-primary/5 text-primary">
+      <ni-badge variant="outline" class="px-4 py-1 border-primary/20 bg-primary/5 text-primary">
         Project Mission
-      </Badge>
+      </ni-badge>
       <h1 class="text-4xl md:text-5xl font-black tracking-tighter">
         Building the next generation of <br />
         <span
@@ -29,15 +29,15 @@ const stats = [
       </p>
     </section>
 
-    <!-- Stats Grid -->
+    <!-- 数据 -->
     <section class="container mx-auto max-w-7xl px-6 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-        <Card
+        <ni-card
           v-for="stat in stats"
           :key="stat.label"
           class="bg-white/50 dark:bg-black/50 border-neutral-200 dark:border-neutral-800 backdrop-blur-sm rounded-3xl overflow-hidden group hover:border-primary/50 transition-all"
         >
-          <CardContent class="p-8 text-center space-y-4">
+          <ni-card-content class="p-8 text-center space-y-4">
             <div
               class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto group-hover:scale-110 transition-transform"
             >
@@ -49,12 +49,12 @@ const stats = [
                 {{ stat.label }}
               </p>
             </div>
-          </CardContent>
-        </Card>
+          </ni-card-content>
+        </ni-card>
       </div>
     </section>
 
-    <!-- Detailed Content -->
+    <!-- 详细内容 -->
     <section
       class="container mx-auto max-w-5xl px-6 lg:px-8 bg-neutral-900 dark:bg-neutral-800/50 rounded-[40px] p-8 md:p-16 text-white overflow-hidden relative group"
     >
@@ -82,13 +82,13 @@ const stats = [
               <span class="text-neutral-300">{{ item }}</span>
             </li>
           </ul>
-          <Button
+          <ni-button
             variant="secondary"
             size="lg"
             class="rounded-full px-8 bg-white text-black hover:bg-neutral-200"
           >
             Read Docs
-          </Button>
+          </ni-button>
         </div>
         <div class="hidden md:block">
           <div class="p-1 rounded-3xl bg-linear-to-br from-white/20 to-transparent">

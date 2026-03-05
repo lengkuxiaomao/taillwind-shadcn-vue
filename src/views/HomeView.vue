@@ -34,7 +34,7 @@ const features = [
 
 <template>
   <div class="space-y-24 pb-20 overflow-hidden">
-    <!-- Hero Section -->
+    <!-- 首页介绍 -->
     <section class="relative pt-20 pb-16 md:pt-32 md:pb-24">
       <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
         <div
@@ -47,12 +47,12 @@ const features = [
 
       <div class="container mx-auto max-w-7xl px-6 lg:px-8 text-center space-y-8">
         <div class="flex justify-center">
-          <Badge
+          <ni-badge
             variant="secondary"
             class="px-3 py-1 text-xs tracking-wider uppercase font-semibold bg-neutral-200/50 dark:bg-neutral-800/50 backdrop-blur-sm border-neutral-300 dark:border-neutral-700"
           >
             Now with Tailwind CSS v4 & Shadcn-vue
-          </Badge>
+          </ni-badge>
         </div>
 
         <h1
@@ -73,25 +73,25 @@ const features = [
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4 mt-12">
-          <Button
+          <ni-button
             size="lg"
             class="shadow-xl shadow-primary/30 h-12 px-8 text-md font-semibold rounded-full group transition-all active:scale-95"
           >
             Get Started
             <ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-          <Button
+          </ni-button>
+          <ni-button
             size="lg"
             variant="outline"
             class="h-12 px-8 text-md font-semibold bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border-neutral-300 dark:border-neutral-700 transition-all active:scale-95"
           >
             Documentation
-          </Button>
+          </ni-button>
         </div>
       </div>
     </section>
 
-    <!-- State Management Demo -->
+    <!-- 状态管理示例 -->
     <section class="container mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row items-stretch gap-12">
         <div class="flex-1 space-y-6 flex flex-col justify-center">
@@ -120,17 +120,17 @@ const features = [
             </div>
           </div>
           <div class="pt-4 flex gap-3">
-            <Button
+            <ni-button
               @click="counter.increment()"
               class="rounded-xl px-6 py-6 h-auto transition-all active:scale-90"
             >
               Increment Count
-            </Button>
+            </ni-button>
           </div>
         </div>
 
         <div class="flex-1">
-          <Card
+          <ni-card
             class="h-full bg-white/40 dark:bg-black/40 backdrop-blur-xl border-neutral-200 dark:border-neutral-800 shadow-2xl rounded-[32px] p-8"
           >
             <pre
@@ -147,14 +147,16 @@ const features = [
 })</code></pre>
             <div class="mt-6 flex items-center justify-between">
               <span class="text-xs text-muted-foreground">src/stores/counter.ts</span>
-              <Badge variant="outline" class="font-mono text-[10px] opacity-70">typescript</Badge>
+              <ni-badge variant="outline" class="font-mono text-[10px] opacity-70"
+                >typescript</ni-badge
+              >
             </div>
-          </Card>
+          </ni-card>
         </div>
       </div>
     </section>
 
-    <!-- Features Grid -->
+    <!-- 技术栈 -->
     <section class="container mx-auto max-w-7xl px-6 lg:px-8 pt-12">
       <div class="text-center mb-16 space-y-4">
         <h2 class="text-3xl font-bold tracking-tight">The Tech Stack</h2>
@@ -164,12 +166,12 @@ const features = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card
+        <ni-card
           v-for="feature in features"
           :key="feature.title"
           class="group hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-3xl"
         >
-          <CardHeader>
+          <ni-card-header>
             <div
               :class="[
                 'w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 duration-500',
@@ -178,12 +180,12 @@ const features = [
             >
               <component :is="feature.icon" class="w-6 h-6" />
             </div>
-            <CardTitle class="text-xl font-bold">{{ feature.title }}</CardTitle>
-            <CardDescription class="text-base leading-relaxed pt-2">
+            <ni-card-title class="text-xl font-bold">{{ feature.title }}</ni-card-title>
+            <ni-card-description class="text-base leading-relaxed pt-2">
               {{ feature.description }}
-            </CardDescription>
-          </CardHeader>
-        </Card>
+            </ni-card-description>
+          </ni-card-header>
+        </ni-card>
       </div>
     </section>
   </div>

@@ -44,7 +44,7 @@ import { BatteryFull } from 'lucide-vue-next'
         </nav>
 
         <div class="flex items-center gap-4">
-          <ThemeToggle />
+          <theme-toggle />
           <a
             href="https://github.com/shadcn-vue"
             target="_blank"
