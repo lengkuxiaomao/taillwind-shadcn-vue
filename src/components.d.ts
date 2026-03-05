@@ -11,6 +11,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Footer: typeof import('@/components/common/footer')['Footer']
+    Header: typeof import('@/components/common/header')['Header']
     NiBadge: typeof import('@/components/ui/badge')['Badge']
     NiButton: typeof import('@/components/ui/button')['Button']
     NiCard: typeof import('@/components/ui/card')['Card']
