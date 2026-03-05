@@ -4,7 +4,7 @@ import { BatteryFull } from 'lucide-vue-next'
 
 <template>
   <div class="min-h-screen bg-background font-sans text-foreground">
-    <!-- Premium Header -->
+    <!-- 头部 -->
     <header
       class="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md transition-all duration-300"
     >
@@ -58,7 +58,7 @@ import { BatteryFull } from 'lucide-vue-next'
       </div>
     </header>
 
-    <!-- Page Content -->
+    <!-- 内容 -->
     <main>
       <RouterView v-slot="{ Component }">
         <transition name="fade" mode="out-in">
@@ -67,7 +67,7 @@ import { BatteryFull } from 'lucide-vue-next'
       </RouterView>
     </main>
 
-    <!-- Footer -->
+    <!-- 底部 -->
     <footer class="border-t py-12 bg-white dark:bg-neutral-900 mt-20">
       <div class="container mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center justify-between gap-6">

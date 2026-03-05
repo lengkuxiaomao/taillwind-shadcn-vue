@@ -1,10 +1,8 @@
 import { useColorMode, useStorage } from '@vueuse/core'
-import { watch } from 'vue'
-
 export type ColorTheme = 'default' | 'rose'
 
 export function useTheme() {
-  // Light/Dark mode management
+  // 模式管理
   const mode = useColorMode({
     attribute: 'class',
     modes: {
@@ -13,10 +11,10 @@ export function useTheme() {
     },
   })
 
-  // Specific color theme management (e.g., rose, blue, etc.)
+  // 主题色管理
   const theme = useStorage<ColorTheme>('app-theme', 'default')
 
-  // Sync theme class to html element
+  // 同步主题色到html根节点
   watch(
     theme,
     (newTheme, oldTheme) => {

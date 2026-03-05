@@ -8,7 +8,7 @@ const { mode, theme, toggleMode, setTheme } = useTheme()
 
 <template>
   <div class="flex items-center gap-2 p-2 bg-card border rounded-xl shadow-lg backdrop-blur-md">
-    <!-- Mode Toggle -->
+    <!-- 切换模式 -->
     <Button
       variant="ghost"
       size="icon"
@@ -21,7 +21,7 @@ const { mode, theme, toggleMode, setTheme } = useTheme()
 
     <div class="w-px h-6 bg-border mx-1" />
 
-    <!-- Theme Selector -->
+    <!-- 切换主题色 -->
     <div class="flex gap-1.5">
       <button
         class="w-8 h-8 rounded-full border-2 transition-all hover:scale-110"
