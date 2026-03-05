@@ -2,9 +2,9 @@
 import { CheckCircle2, Globe, Cpu, Palette } from 'lucide-vue-next'
 
 const stats = [
-  { label: 'Performance', value: '100', icon: Cpu },
-  { label: 'Accessibility', value: '100', icon: Globe },
-  { label: 'Best Practices', value: '100', icon: CheckCircle2 },
+  { label: '性能', value: '100', icon: Cpu },
+  { label: '可访问性', value: '100', icon: Globe },
+  { label: '最佳实践', value: '100', icon: CheckCircle2 },
   { label: 'SEO', value: '100', icon: Palette },
 ]
 </script>
@@ -17,15 +17,15 @@ const stats = [
         Project Mission
       </ni-badge>
       <h1 class="text-4xl md:text-5xl font-black tracking-tighter">
-        Building the next generation of <br />
+        打造下一代
+        <br />
         <span
           class="bg-linear-to-r from-emerald-500 to-sky-500 bg-clip-text text-transparent italic"
-          >Web Experiences</span
+          >Web 开发体验</span
         >
       </h1>
       <p class="text-lg text-muted-foreground leading-relaxed">
-        This boilerplate is designed to provide developers with a rock-solid foundation for building
-        scalable, high-performance applications without compromising on aesthetic quality.
+        该模板旨在为开发人员提供坚实的基础，以便构建 可扩展、高性能的应用程序，同时又不牺牲美观性。
       </p>
     </section>
 
@@ -64,14 +64,14 @@ const stats = [
 
       <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-8">
-          <h2 class="text-3xl font-bold tracking-tight">Why this stack?</h2>
+          <h2 class="text-3xl font-bold tracking-tight">为什么选择这个技术栈？</h2>
           <ul class="space-y-4">
             <li
               v-for="item in [
-                'Type-safety with TypeScript',
-                'Atomic styling with Tailwind v4',
-                'UI Components from Shadcn',
-                'Fast HMR with Vite',
+                '使用 TypeScript 实现类型安全',
+                '使用 Tailwind v4 的原子风格',
+                '来自 Shadcn 的 UI 组件',
+                '使用 Vite 快速开发和构建',
               ]"
               :key="item"
               class="flex items-center gap-3"

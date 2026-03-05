@@ -20,6 +20,6 @@ declare module 'vue' {
     NiCardTitle: typeof import('@/components/ui/card')['CardTitle']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ThemeToggle: typeof import('@/components/common/ThemeToggle')['ThemeToggle']
+    ThemeToggle: typeof import('@/components/common/themeToggle')['ThemeToggle']
   }
 }

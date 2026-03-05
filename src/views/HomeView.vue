@@ -7,25 +7,25 @@ const counter = useCounterStore()
 const features = [
   {
     title: 'Vue 3 + Vite',
-    description: 'The progressive JavaScript framework with the fastest build tool.',
+    description: '拥有最快构建工具的渐进式 JavaScript 框架。',
     icon: Rocket,
     color: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
   },
   {
     title: 'TypeScript',
-    description: 'Type safety out of the box for scalable development.',
+    description: '开箱即用的类型安全，支持可扩展的开发。',
     icon: ShieldCheck,
     color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
   },
   {
     title: 'Tailwind CSS v4',
-    description: 'A utility-first CSS framework for rapid UI development.',
+    description: '用于快速 UI 开发的原子化 CSS 框架。',
     icon: Zap,
     color: 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
   },
   {
     title: 'Shadcn-vue',
-    description: 'Beautifully designed components built with Radix-vue.',
+    description: '基于 Reka-ui 构建的精美组件库。',
     icon: Layers,
     color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400',
   },
@@ -58,34 +58,35 @@ const features = [
         <h1
           class="text-5xl md:text-7xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.1]"
         >
-          Modern Vue Stack <br />
+          Shadcn Vue Ui<br />
           <span
             class="bg-linear-to-r from-primary to-indigo-500 bg-clip-text text-transparent italic"
-            >Redefined</span
+            >快速开发框架</span
           >
         </h1>
 
         <p
           class="mx-auto max-w-2xl text-xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed"
         >
-          Crafting premium web experiences with Vue 3, Vite, TypeScript, and the power of atomic
-          styling.
+          Vue 3、Vite、TypeScript 和原子样式打造优质 Web 体验
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4 mt-12">
-          <ni-button
-            size="lg"
-            class="shadow-xl shadow-primary/30 h-12 px-8 text-md font-semibold rounded-full group transition-all active:scale-95"
-          >
-            Get Started
-            <ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </ni-button>
+          <a href="https://www.shadcn-vue.com" target="_blank">
+            <ni-button
+              size="lg"
+              class="shadow-xl shadow-primary/30 h-12 px-8 text-md font-semibold rounded-full group transition-all active:scale-95"
+            >
+              立即开始
+              <ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </ni-button>
+          </a>
           <ni-button
             size="lg"
             variant="outline"
             class="h-12 px-8 text-md font-semibold bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border-neutral-300 dark:border-neutral-700 transition-all active:scale-95"
           >
-            Documentation
+            文档
           </ni-button>
         </div>
       </div>
@@ -95,15 +96,14 @@ const features = [
     <section class="container mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row items-stretch gap-12">
         <div class="flex-1 space-y-6 flex flex-col justify-center">
-          <h2 class="text-3xl font-bold tracking-tight">Reactive State Management</h2>
+          <h2 class="text-3xl font-bold tracking-tight">状态管理</h2>
           <p class="text-lg text-muted-foreground leading-relaxed">
-            Experience the seamless integration of Pinia stores with our design system. Real-time
-            reactivity paired with beautiful animations.
+            体验 Pinia 状态管理与设计系统的无缝集成。实时响应与精美动画的完美结合。
           </p>
           <div class="flex items-center gap-6 pt-4">
             <div class="space-y-2">
               <span class="text-xs font-mono uppercase tracking-widest text-neutral-400"
-                >Current Count</span
+                >当前计数</span
               >
               <p class="text-4xl font-black tabular-nums font-mono text-primary">
                 {{ counter.count }}
@@ -112,7 +112,7 @@ const features = [
             <div class="h-12 w-px bg-neutral-200 dark:bg-neutral-800"></div>
             <div class="space-y-2">
               <span class="text-xs font-mono uppercase tracking-widest text-neutral-400"
-                >Computed ×2</span
+                >计算 ×2</span
               >
               <p class="text-4xl font-black tabular-nums font-mono text-indigo-400">
                 {{ counter.doubleCount }}
@@ -124,7 +124,7 @@ const features = [
               @click="counter.increment()"
               class="rounded-xl px-6 py-6 h-auto transition-all active:scale-90"
             >
-              Increment Count
+              增加计数
             </ni-button>
           </div>
         </div>
@@ -159,9 +159,9 @@ const features = [
     <!-- 技术栈 -->
     <section class="container mx-auto max-w-7xl px-6 lg:px-8 pt-12">
       <div class="text-center mb-16 space-y-4">
-        <h2 class="text-3xl font-bold tracking-tight">The Tech Stack</h2>
+        <h2 class="text-3xl font-bold tracking-tight">技术栈</h2>
         <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Built with selection of industry-leading tools for the best developer experience.
+          采用业内领先的工具构建，旨在提供最佳的开发者体验。
         </p>
       </div>
 

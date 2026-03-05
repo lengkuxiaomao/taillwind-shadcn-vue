@@ -46,7 +46,7 @@ import { BatteryFull } from 'lucide-vue-next'
         <div class="flex items-center gap-4">
           <theme-toggle />
           <a
-            href="https://github.com/shadcn-vue"
+            href="https://github.com/lengkuxiaomao/taillwind-shadcn-vue"
             target="_blank"
             rel="noreferrer"
             class="hidden sm:inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium border border-border bg-transparent hover:bg-accent transition-all active:scale-95 shadow-sm"

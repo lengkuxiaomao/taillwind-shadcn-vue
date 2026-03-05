@@ -40,7 +40,7 @@ export default defineConfig(({ mode }) => {
     // 开发服务器配置
     server: {
       host: true, // 支持局域网地址访问
-      port: 5173,
+      port: 5999,
     },
 
     // 生产环境优化
