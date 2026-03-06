@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BatteryFull } from 'lucide-vue-next'
+import { Lollipop } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -49,7 +49,7 @@ import { BatteryFull } from 'lucide-vue-next'
           rel="noreferrer"
           class="hidden sm:inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium border border-border bg-transparent hover:bg-accent transition-all active:scale-95 shadow-sm"
         >
-          <BatteryFull class="h-4 w-4" />
+          <Lollipop class="h-4 w-4" />
           GitHub
         </a>
       </div>
