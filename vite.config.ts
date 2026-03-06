@@ -38,17 +38,8 @@ export default defineConfig(({ mode }) => {
     },
     // 预览服务器配置（vite preview）
     preview: {
+      host: true,
       port: 5998, // 预览服务器端口（默认4173）
-      host: '0.0.0.0', // 监听所有地址
-      open: true, // 自动打开浏览器
-      cors: true, // 启用CORS
-      proxy: {
-        // 代理配置（如果需要）
-        '/api': {
-          target: 'http://localhost:8080',
-          changeOrigin: true,
-        },
-      },
     },
     // 开发服务器配置
     server: {
