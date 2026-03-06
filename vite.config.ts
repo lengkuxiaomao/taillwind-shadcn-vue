@@ -36,7 +36,20 @@ export default defineConfig(({ mode }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-
+    // 预览服务器配置（vite preview）
+    preview: {
+      port: 5998, // 预览服务器端口（默认4173）
+      host: '0.0.0.0', // 监听所有地址
+      open: true, // 自动打开浏览器
+      cors: true, // 启用CORS
+      proxy: {
+        // 代理配置（如果需要）
+        '/api': {
+          target: 'http://localhost:8080',
+          changeOrigin: true,
+        },
+      },
+    },
     // 开发服务器配置
     server: {
       host: true, // 支持局域网地址访问
