@@ -1,0 +1,192 @@
+<script setup lang="ts">
+import { useCounterStore } from '@/stores/counter'
+import { Rocket, Layers, ShieldCheck, Zap, ArrowRight } from 'lucide-vue-next'
+
+const counter = useCounterStore()
+
+const features = [
+  {
+    title: 'Vue 3 + Vite',
+    description: '拥有最快构建工具的渐进式 JavaScript 框架。',
+    icon: Rocket,
+    color: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+  },
+  {
+    title: 'TypeScript',
+    description: '开箱即用的类型安全，支持可扩展的开发。',
+    icon: ShieldCheck,
+    color: 'bg-blue-500/10 text-blue-600 dark:text-blue-400',
+  },
+  {
+    title: 'Tailwind CSS v4',
+    description: '用于快速 UI 开发的原子化 CSS 框架。',
+    icon: Zap,
+    color: 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
+  },
+  {
+    title: 'Shadcn-vue',
+    description: '基于 Reka-ui 构建的精美组件库。',
+    icon: Layers,
+    color: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400',
+  },
+]
+</script>
+
+<template>
+  <div class="space-y-24 pb-20 overflow-hidden">
+    <!-- 首页介绍 -->
+    <section class="relative pt-20 pb-16 md:pt-32 md:pb-24">
+      <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+        <div
+          class="absolute top-[0%] left-[50%] -translate-x-1/2 w-[1000px] h-[600px] bg-linear-to-b from-primary/10 via-transparent to-transparent blur-[120px] rounded-full opacity-60"
+        ></div>
+        <div
+          class="absolute bottom-[-10%] right-[10%] w-[300px] h-[300px] bg-sky-500/20 blur-[100px] rounded-full"
+        ></div>
+      </div>
+
+      <div class="container mx-auto max-w-7xl px-6 lg:px-8 text-center space-y-8">
+        <div class="flex justify-center">
+          <ni-badge
+            variant="secondary"
+            class="px-3 py-1 text-xs tracking-wider uppercase font-semibold bg-neutral-200/50 dark:bg-neutral-800/50 backdrop-blur-sm border-neutral-300 dark:border-neutral-700"
+          >
+            Now with Tailwind CSS v4 & Shadcn-vue
+          </ni-badge>
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.1]"
+        >
+          Shadcn Vue Ui<br />
+          <span
+            class="bg-linear-to-r from-primary to-indigo-500 bg-clip-text text-transparent italic"
+            >快速开发框架</span
+          >
+        </h1>
+
+        <p
+          class="mx-auto max-w-2xl text-xl text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed"
+        >
+          Vue 3、Vite、TypeScript 和原子样式打造优质 Web 体验
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-12">
+          <a href="https://www.shadcn-vue.com" target="_blank">
+            <ni-button
+              size="lg"
+              class="shadow-xl shadow-primary/30 h-12 px-8 text-md font-semibold rounded-full group transition-all active:scale-95"
+            >
+              立即开始
+              <ArrowRight class="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </ni-button>
+          </a>
+          <ni-button
+            size="lg"
+            variant="outline"
+            class="h-12 px-8 text-md font-semibold bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border-neutral-300 dark:border-neutral-700 transition-all active:scale-95"
+          >
+            文档
+          </ni-button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 状态管理示例 -->
+    <section class="container mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-stretch gap-12">
+        <div class="flex-1 space-y-6 flex flex-col justify-center">
+          <h2 class="text-3xl font-bold tracking-tight">状态管理</h2>
+          <p class="text-lg text-muted-foreground leading-relaxed">
+            体验 Pinia 状态管理与设计系统的无缝集成。实时响应与精美动画的完美结合。
+          </p>
+          <div class="flex items-center gap-6 pt-4">
+            <div class="space-y-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-neutral-400"
+                >当前计数</span
+              >
+              <p class="text-4xl font-black tabular-nums font-mono text-primary">
+                {{ counter.count }}
+              </p>
+            </div>
+            <div class="h-12 w-px bg-neutral-200 dark:bg-neutral-800"></div>
+            <div class="space-y-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-neutral-400"
+                >计算 ×2</span
+              >
+              <p class="text-4xl font-black tabular-nums font-mono text-indigo-400">
+                {{ counter.doubleCount }}
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 flex gap-3">
+            <ni-button
+              @click="counter.increment()"
+              class="rounded-xl px-6 py-6 h-auto transition-all active:scale-90"
+            >
+              增加计数
+            </ni-button>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <ni-card
+            class="h-full bg-white/40 dark:bg-black/40 backdrop-blur-xl border-neutral-200 dark:border-neutral-800 shadow-2xl rounded-[32px] p-8"
+          >
+            <pre
+              class="bg-neutral-900 text-neutral-100 p-8 rounded-2xl overflow-x-auto text-[13px] leading-relaxed font-mono shadow-inner select-none"
+            >
+<code><span class="text-indigo-400">export const</span> <span class="text-emerald-400">useCounterStore</span> = <span class="text-amber-400">defineStore</span>('<span class="text-sky-400">counter</span>', () => {
+  <span class="text-indigo-400">const</span> count = <span class="text-sky-400">ref</span>(0)
+  <span class="text-indigo-400">const</span> doubleCount = <span class="text-sky-400">computed</span>(() => <span class="text-emerald-400">count</span>.value * 2)
+  <span class="text-indigo-400">function</span> <span class="text-amber-400">increment</span>() {
+    <span class="text-emerald-400">count</span>.value++
+  }
+
+  <span class="text-indigo-400">return</span> { count, doubleCount, increment }
+})</code></pre>
+            <div class="mt-6 flex items-center justify-between">
+              <span class="text-xs text-muted-foreground">src/stores/counter.ts</span>
+              <ni-badge variant="outline" class="font-mono text-[10px] opacity-70"
+                >typescript</ni-badge
+              >
+            </div>
+          </ni-card>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技术栈 -->
+    <section class="container mx-auto max-w-7xl px-6 lg:px-8 pt-12">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-3xl font-bold tracking-tight">技术栈</h2>
+        <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+          采用业内领先的工具构建，旨在提供最佳的开发者体验。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ni-card
+          v-for="feature in features"
+          :key="feature.title"
+          class="group hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-black/50 backdrop-blur-sm rounded-3xl"
+        >
+          <ni-card-header>
+            <div
+              :class="[
+                'w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 duration-500',
+                feature.color,
+              ]"
+            >
+              <component :is="feature.icon" class="w-6 h-6" />
+            </div>
+            <ni-card-title class="text-xl font-bold">{{ feature.title }}</ni-card-title>
+            <ni-card-description class="text-base leading-relaxed pt-2">
+              {{ feature.description }}
+            </ni-card-description>
+          </ni-card-header>
+        </ni-card>
+      </div>
+    </section>
+  </div>
+</template>
