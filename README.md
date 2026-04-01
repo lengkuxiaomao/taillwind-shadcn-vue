@@ -55,6 +55,7 @@
 | **TypeScript** | 工业级类型检查 | ^5.9.3 |
 | **Tailwind v4** | 现代原子化 CSS 引擎 | ^4.2.1 |
 | **Shadcn-vue** | 基于 Reka-ui 的无头 UI 组件体系 | ^2.9.2 |
+| **Ky** | 现代、微型且基于 Promise 的 HTTP 客户端 | ^1.14.3 |
 | **Pinia** | 设置感十足的 Setup Store 状态库 | ^3.0.4 |
 | **Lucide Vue** | 像素完美的轻量图标库 | ^0.576.0 |
 | **Oxlint** | 极速 JavaScript 静态检查工具 | ^1.50.0 |
@@ -107,8 +108,10 @@ src/
 │   ├── common/         # 业务强相关通用组件 (ThemeToggle, Layouts)
 │   └── ui/             # Shadcn-vue 基础组件库 (已开启 ni- 前缀自动导入)
 ├── composables/        # 共享逻辑 Hooks (useTheme 等)
+├── http/               # 基于 Ky 封装的 HTTP 模块 (拦截器、业务响应处理)
 ├── lib/                # 核心库二次封装与工具函数 (utils.ts / cn 助手)
 ├── router/             # 扁平化的路由管理
+├── services/           # 业务接口 Service 层 (数据接入与聚合)
 ├── stores/             # Pinia Setup Store 状态树 (模块化拆分)
 ├── views/              # 页面容器级组件
 └── App.vue             # 入口组件

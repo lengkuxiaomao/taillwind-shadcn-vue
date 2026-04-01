@@ -21,6 +21,15 @@
 - **目录结构**: 所有 Store 存放于 `src/stores/`，每个 Store 对应一个独立文件，以最大限度减少模块间耦合。
 - **持久化**: 确需持久化时，优先使用 `@vueuse/core` 的 `useStorage` 手动实现。
 
+### 🌐 1.2 网络与数据管理 (Networking & Services)
+
+- **HTTP 客户端**: 核心使用 **Ky**。它是一个极简、现代且基于 Promise 的工具，我们对其进行了深度封装 (`src/http/request.ts`)。
+- **业务响应拦截**: 必须通过 `handleBusinessResponse` 统一处理后端返回的 `ApiResponse` 结构，成功时仅返回 `data` 部分。
+- **Service 层模式**: 严禁在视图组件或 Store 中直接编写复杂的 Fetch/Ky 调用。
+  - **必须**在 `src/services/` 中定义相关业务 Service（如 `userService`）。
+  - **职责分离**: Store 负责“状态共享”，Service 负责“数据获取”。Store 的 `action` 应该调用 Service 提供的接口。
+- **环境变量**: 基础 API 路径由 `.env` 中的 `VITE_API_BASE_URL` 定义。
+
 ---
 
 ## 🧩 2. Shadcn UI 组件使用指引
@@ -76,6 +85,8 @@ npx shadcn-vue@latest add [组件名]
 
 - **`src/lib/utils.ts`**: 核心工具函数（包含 `cn` 合并 Tailwind 类名的关键工具）。
 - **`src/composables/`**: 业务逻辑抽离（Hook），命名统一以 `use` 开头（如 `useMention.ts`）。
+- **`src/http/`**: HTTP 库封装，包含拦截器、请求快捷方式及通用类型定义。
+- **`src/services/`**: 业务 Service 层，负责与 API 交互，返回经业务逻辑校验后的纯净数据。
 - **`src/components/common/`**: 存放业务强相关组件（Header, ThemeToggle）或通用布局组件。
 - **`src/views/`**: 存放页面级组件。
 
