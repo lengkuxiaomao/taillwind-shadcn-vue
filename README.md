@@ -1,155 +1,140 @@
-# ✨ Tailwind + Shadcn-vue Modern Starter
+# ✨ Tailwind + Shadcn-vue Modern Starter (Ni-V4 Edition)
 
 <p align="center">
-  <img src="./public/self.png" width="80" height="80" />
+  <img src="./public/self.png" width="80" height="80" style="border-radius: 20%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
 </p>
 
 <p align="center">
-  <strong>一款基于 Vue 3 + Vite + TypeScript + Shadcn-vue + Pinia + Vue Router 的极简且强大的现代化开发模版。</strong>
+  <strong>一款基于 Vue 3 + Vite 7 + TypeScript + Tailwind v4 的极简且强大的“AI-Native”现代化开发模版。</strong>
 </p>
 
 <p align="center">
-  <a href="#-特性">特性</a> •
+  <a href="#-核心特性">核心特性</a> •
   <a href="#-技术栈">技术栈</a> •
   <a href="#-快速开始">快速开始</a> •
-  <a href="#-项目结构">项目结构</a>
+  <a href="#-项目结构">项目结构</a> •
+  <a href="#-开发规范">开发规范</a>
 </p>
 
 ---
 
-## 🚀 项目理念
+## 🚀 项目理念 (Philosophy)
 
-本项目旨在通过采用最前沿的 Web 开发理念（如 **Tailwind CSS v4** 和 **Shadcn-vue**），彻底抛弃厚重的传统组件库与冗余的 CSS 文件。
+本项目致力于通过采用最前沿的 Web 开发工具（如 **Tailwind CSS v4** 和 **Shadcn-vue**），构建一个体积小、速度快、且深度支持 **AI 辅助编码** 的现代化样板工程。
 
-- **原子化设计**: 利用 Tailwind v4 极大地减少 CSS 体积。
-- **无头组件**: Shadcn-vue 提供高度可定制的 UI 基础，确保设计风格的灵活性。
-- **极致体验**: 集成了流畅的动画效果、磨砂玻璃质感 (Glassmorphism) 以及响应式布局。
-
----
-
-## ✨ 核心特性
-
-- 🛠 **Tailwind CSS v4 & Vite 7**: 享受极速的构建体验与更强大的 CSS 工具集。
-- 📦 **Shadcn-vue (ni-prefix)**: 预置了一系列精美的 UI 组件（Badge, Button, Card, Checkbox, ScrollArea）。
-- 🏷 **@提及系统 (Mention System)**: 在 `AboutView` 中实现了一个极具创意的 `@` 提及功能，支持：
-  - **图片一键插入**: 输入 `@` 调起菜单。
-  - **动态预览**: 鼠标悬停显示缩略图，点击查看高清大图。
-  - **富文本体验**: 基于 `contenteditable` 的拟合交互。
-- 🍍 **Pinia 状态管理**: 简洁的模块化状态管理方案。
-- 🎨 **现代美学**: 深度集成 Lucide 图标库，支持深色模式与动态渐变色。
+- **原子化设计**: 利用 Tailwind v4 的极速 CSS 引擎，抛弃沉重的配置，拥抱原生 CSS 变量。
+- **AI-Native**: 为开发者（及 AI 代理）量身定制，通过统一组件库 (Shadcn-vue) 和 自动导入 (Auto Imports) 机制，极大提升开发效率。
+- **沉浸式 UI**: 深度集成玻璃质感 (Glassmorphism)、流畅的微交互与响应式动态布局。
 
 ---
 
-## 🛠 技术栈
+## ✨ 核心特性 (Features)
 
-| 核心库              | 描述                                                  |
-| :------------------ | :---------------------------------------------------- |
-| **Vue 3.5+**        | 组合式 API (Composition API) 与 组合式 Script Setup。 |
-| **Vite 7**          | 下一代前端工具链，极速热重载。                        |
-| **TypeScript**      | 完备的类型安全检查。                                  |
-| **Tailwind CSS v4** | 现代原子化 CSS 框架。                                 |
-| **Shadcn-vue**      | 基于 Reka-ui 构建的无头 UI 组件库。                   |
-| **Pinia**           | 现代化的 Vue 状态管理库。                             |
-| **Lucide Vue Next** | 轻量级、精美的图标库。                                |
-| **Oxlint**          | 最新一代极速 JavaScript/TypeScript 检查工具。         |
+### 🎨 1. Tailwind CSS v4 & Vite 7 (The Speed)
+- **零配置体验**: 告别 `tailwind.config.js`，通过 CSS 指令直接在项目样式中扩展主题。
+- **高性能引擎**: 极致的响应速度，利用全新的编译技术使构建和刷新快如闪电。
+
+### 📦 2. Shadcn-vue (Unified Components)
+- **`ni-` 前缀**: 深度定制组件解析器。位于 `src/components/ui` 下的组件可直接使用 `<ni-[component]>` 前缀（如 `<ni-button>`、`<ni-card>`）。
+- **零配置导入**: 基于 `unplugin-vue-components` 实现组件级自动按需导入，无需手动引用。
+
+
+### ⚡ 3. 极致工程化 (Tooling)
+- **Oxlint**: 使用高性能 Oxlint 取代部分 ESLint 规则，带来 50-100 倍的代码检查提速。
+- **Auto Import**: 自动导入 Vue、Vue Router、Pinia、VueUse 等基础 API。
+- **TypeScript**: 完备的类型安全增强，配合 `vue-tsc` 进行严格静态检查。
 
 ---
 
-## 🧩 Shadcn-vue 使用指南
+## 🛠 技术栈 (Tech Stack)
 
-本项目深度集成了 [Shadcn-vue](https://www.shadcn-vue.com)，并进行了工程化优化。
+| 核心库 | 描述 | 版本 |
+| :--- | :--- | :--- |
+| **Vue 3.5+** | 组合式 API (Setup Script) 核心框架 | Latest |
+| **Vite 7** | 下一代前端构建工具 (Vite 7) | ^7.3.1 |
+| **TypeScript** | 工业级类型检查 | ^5.9.3 |
+| **Tailwind v4** | 现代原子化 CSS 引擎 | ^4.2.1 |
+| **Shadcn-vue** | 基于 Reka-ui 的无头 UI 组件体系 | ^2.9.2 |
+| **Pinia** | 设置感十足的 Setup Store 状态库 | ^3.0.4 |
+| **Lucide Vue** | 像素完美的轻量图标库 | ^0.576.0 |
+| **Oxlint** | 极速 JavaScript 静态检查工具 | ^1.50.0 |
 
-### 1. 官方文档
+---
 
-访问 [shadcn-vue.com](https://www.shadcn-vue.com) 获取完整的组件列表和 API 参考。
+## 🏁 快速开始 (Quick Start)
 
-### 2. 添加新组件
-
-使用 shadcn-vue CLI 可以在项目中快速添加新组件：
+### 1. 检出与安装
 
 ```bash
-npx shadcn-vue@latest add [组件名]
-```
-
-> **注意**: 组件会自动下载到 `src/components/ui` 目录下。
-
-### 3. 组件自动导入与 `ni-` 前缀
-
-为了保持代码整洁并提升开发效率，项目配置了 **组件自动导入** 功能：
-
-- **无需手动 Import**: 直接在模板中使用即可。
-- **自定义前缀**: 所有位于 `src/components/ui` 下的组件都已通过自定义解析器自动添加了 `ni-` (或 PascalCase 的 `Ni`) 前缀。
-  - 例如：`Button` 组件在模板中使用为 `<ni-button>`。
-  - 例如：`Card` 组件在模板中使用为 `<ni-card>`。
-
----
-
-## 📂 项目结构
-
-```bash
-src/
-├── assets/             # 静态资源 (图片, 全局样式)
-├── components/         # 共享组件
-│   ├── common/         # 通用组件 (Header, Footer, ThemeToggle)
-│   └── ui/             # Shadcn-vue 基础组件库
-├── views/              # 路由页面
-│   ├── HomeView.vue    # 首页 (特性展示, 状态管理演示)
-│   └── AboutView.vue   # 关于页 (@提及系统核心演示)
-├── stores/             # Pinia 状态树
-├── router/             # Vue Router 配置
-└── lib/                # 工具函数与库配置
-```
-
----
-
-## 🏁 快速开始
-
-### 1. 安装依赖
-
-```bash
+# 建议使用 pnpm 以获得更好的性能
 npm install
 ```
 
-### 2. 开发环境启动
+### 2. 开发模式
 
 ```bash
 npm run dev
 ```
 
-### 3. 生产环境构建
+### 3. 构建与预览
 
 ```bash
+# 构建生产版本 (包含静态检查)
 npm run build
+
+# 本地预览构建产物
+npm run preview
 ```
 
-### 4. 代码质量检查
+### 4. 代码质量管理
 
 ```bash
-# 运行 ESLint 和 Oxlint 检查
+# 运行 Lint 检查 (Oxlint + ESLint 并行)
 npm run lint
 
-# 自动格式化代码
+# 运行代码格式化 (Prettier)
 npm run format
 ```
 
 ---
 
-## 🔧 自定义配置
+## 📂 项目目录结构 (Project Layout)
 
-如需修改 Vite、TypeScript 或 Tailwind 的配置，请参考以下文件：
-
-- `vite.config.ts`
-- `tailwind.config.ts` (或在 CSS 中配置 v4)
-- `tsconfig.json`
+```text
+src/
+├── assets/             # 全局样式 (styles/main.css)、字体与多媒体资源
+├── components/         # 级联组件目录
+│   ├── common/         # 业务强相关通用组件 (ThemeToggle, Layouts)
+│   └── ui/             # Shadcn-vue 基础组件库 (已开启 ni- 前缀自动导入)
+├── composables/        # 共享逻辑 Hooks (useTheme 等)
+├── lib/                # 核心库二次封装与工具函数 (utils.ts / cn 助手)
+├── router/             # 扁平化的路由管理
+├── stores/             # Pinia Setup Store 状态树 (模块化拆分)
+├── views/              # 页面容器级组件
+└── App.vue             # 入口组件
+```
 
 ---
 
-## 📄 许可证
+## 💎 开发规范 (Guidelines)
 
-本项目遵循 [MIT License](LICENSE) 协议。
+> [!IMPORTANT]
+> 为了维持项目的代码整洁度与视觉一致性，请务必遵循以下规范：
+
+1. **组件前缀**: 使用 UI 组件时，强制使用 **`ni-`** 前缀（例如：`<ni-button variant="outline">`）。
+2. **状态管理**: 强制使用 **Setup Store** 模式编写 Pinia Store。
+3. **样式处理**: 优先使用 Tailwind 工具类。如有自定义需求，应在 `src/assets/styles/main.css` 中配置 `@theme`。
+4. **组件添加**: 必须通过 CLI 命令 `npx shadcn-vue@latest add [name]` 添加新组件，严禁手动复制。
+5. **AI 协作**: 本项目是 **AI-Native** 设计。推荐在 AI 指令中引用 `agents.md` 以获得最高质量的代码补全。
+
+---
+
+## 📄 开源许可证
+
+本项目基于 [MIT License](LICENSE) 协议发布。
 
 ---
 
 <p align="center">
-  Built with ❤️ by Developer
+  Built with ❤️ by <a href="https://github.com/Lengkuxiaomao">Lengkuxiaomao</a>
 </p>
