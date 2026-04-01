@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="#-核心特性">核心特性</a> •
+  <a href="#-核心要素优势分析">核心优势</a> •
   <a href="#-技术栈">技术栈</a> •
   <a href="#-快速开始">快速开始</a> •
   <a href="#-项目结构">项目结构</a> •
@@ -22,27 +22,21 @@
 
 本项目致力于通过采用最前沿的 Web 开发工具（如 **Tailwind CSS v4** 和 **Shadcn-vue**），构建一个体积小、速度快、且深度支持 **AI 辅助编码** 的现代化样板工程。
 
-- **原子化设计**: 利用 Tailwind v4 的极速 CSS 引擎，抛弃沉重的配置，拥抱原生 CSS 变量。
-- **AI-Native**: 为开发者（及 AI 代理）量身定制，通过统一组件库 (Shadcn-vue) 和 自动导入 (Auto Imports) 机制，极大提升开发效率。
-- **沉浸式 UI**: 深度集成玻璃质感 (Glassmorphism)、流畅的微交互与响应式动态布局。
-
 ---
 
-## ✨ 核心特性 (Features)
+## ✨ 核心要素优势分析 (Core Advantages)
 
-### 🎨 1. Tailwind CSS v4 & Vite 7 (The Speed)
-- **零配置体验**: 告别 `tailwind.config.js`，通过 CSS 指令直接在项目样式中扩展主题。
-- **高性能引擎**: 极致的响应速度，利用全新的编译技术使构建和刷新快如闪电。
+### ⚡ 1. 极致的开发效率与响应速度 (Performance & DX)
+- **Vite 7 + Oxlint**: 采用行业顶尖构建与巡检工具。Oxlint 提速 50-100 倍，万行代码秒级热更新与校验。
+- **Auto Import**: API 与 UI 组件按需自动导入。配合 **`ni-`** 前缀解析，告别繁琐 `import`，代码纯净如初。
 
-### 📦 2. Shadcn-vue (Unified Components)
-- **`ni-` 前缀**: 深度定制组件解析器。位于 `src/components/ui` 下的组件可直接使用 `<ni-[component]>` 前缀（如 `<ni-button>`、`<ni-card>`）。
-- **零配置导入**: 基于 `unplugin-vue-components` 实现组件级自动按需导入，无需手动引用。
+### 🎨 2. 现代化的样式引擎 (Next-Gen Styling)
+- **Tailwind CSS v4**: Next-Gen 纯 CSS 引擎。告别配置地狱，完全基于 CSS 变量驱动主题扩展与动态渲染。
+- **Shadcn + Reka UI**: 顶级 Headless 组件方案。100% 逻辑掌控力，兼顾原子化样式的灵活性与深度定制需求。
 
-
-### ⚡ 3. 极致工程化 (Tooling)
-- **Oxlint**: 使用高性能 Oxlint 取代部分 ESLint 规则，带来 50-100 倍的代码检查提速。
-- **Auto Import**: 自动导入 Vue、Vue Router、Pinia、VueUse 等基础 API。
-- **TypeScript**: 完备的类型安全增强，配合 `vue-tsc` 进行严格静态检查。
+### 🏗️ 3. 严谨且解耦的软件架构 (Architecture)
+- **Service 层模式**: 强制业务与视图分离。Service 层统一收口接口请求，使 Store 专注状态，逻辑链路清晰透明。
+- **Ky 现代请求系统**: 基于 Fetch API 的现代化请求流。深度封装拦截器与业务模型，轻松应对复杂的生产环境。
 
 ---
 
